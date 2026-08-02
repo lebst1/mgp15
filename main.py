@@ -20,10 +20,12 @@ async def on_shutdown():
     await db.close()
 
 async def main():
+    BOT_TOKEN = "8551906944:AAExdbhnpZwO8RAmu2ck0qNCeAshEQ--j5U"  
+
     bot = Bot(
-        token=config.BOT_TOKEN,
-        default=DefaultBotProperties(parse_mode=ParseMode.HTML)
-    )
+    token=BOT_TOKEN,
+    default=DefaultBotProperties(parse_mode=ParseMode.HTML)
+)
     
     dp = Dispatcher()
     
